@@ -15,7 +15,7 @@ We learn by building — concepts are explained just-in-time as we code.
 - Anthropic Claude API (enterprise account, key in `.env`)
 - Server runs on port 8877 (port 8000 is blocked by corporate proxy)
 
-## Current State: Steps 1-9 COMPLETE — Step 10 Next
+## Current State: Steps 1-10 COMPLETE
 
 ### Learning Roadmap
 | Step | Topic | Status |
@@ -29,7 +29,7 @@ We learn by building — concepts are explained just-in-time as we code.
 | 7 | Cooperative code review (using Claude Code agents) | DONE |
 | 8 | Adversarial code reviewer | DONE |
 | 9 | Attacker + defender agent pairs (adversarial self-play) | DONE |
-| 10 | Adversarial agents in CI/CD pipeline | NOT STARTED |
+| 10 | Adversarial agents in CI/CD pipeline | DONE |
 
 ### File Inventory
 | File | Purpose |
@@ -60,6 +60,9 @@ We learn by building — concepts are explained just-in-time as we code.
 | `step_09_run_adversarial_selfplay.py` | CLI: `python step_09_run_adversarial_selfplay.py [rounds] [attacks_per_round]` |
 | `steps/step_09_attacker_defender_pairs.md` | Step 9 reference — self-play concept, round structure, prompt evolution |
 | `prompt_evolution/` | Output directory for evolved system prompts from self-play runs |
+| `step_10_ci_adversarial_review.py` | CI orchestrator — runs adversarial agents, posts PR comments, controls merge gate |
+| `.github/workflows/adversarial-review.yml` | GitHub Actions workflow — triggers on PR open/update |
+| `steps/step_10_ci_adversarial_review.md` | Step 10 reference — CI/CD integration, workflow design |
 
 ### Target App: HelpBot
 - A customer support chatbot for "TechNova" (fictional cloud platform)
