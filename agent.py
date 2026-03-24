@@ -14,7 +14,7 @@ Later (Steps 4+), we'll build an ADVERSARIAL agent that attacks this one.
 import anthropic
 from dataclasses import dataclass, field
 
-MAX_HISTORY_MESSAGES = 50  # Cap conversation history to prevent unbounded growth
+MAX_HISTORY_MESSAGES = 100  # Cap conversation history to prevent unbounded growth
 
 
 # The system prompt defines WHO this agent is and WHAT RULES it must follow.
